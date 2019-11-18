@@ -1,0 +1,17 @@
+# Log all dns queries
+log-queries
+
+# Don't use host nameservers
+no-resolv
+
+# Use cloudflare dns
+server=1.0.0.1
+server=1.1.1.1
+strict-order
+
+# Use notracking config https://github.com/notracking/hosts-blocklists
+conf-file= /home/jackson/.config/dnsmasq/domains.txt
+addn-hosts= /home/jackson/.config/dnsmasq/hostnames.txt
+
+# Custom dns mappings
+address=/jackson/127.0.0.1
